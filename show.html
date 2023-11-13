@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show</title>
+</head>
+<body>
+    <body>
+        <!-- <button onclick="onclickNew()"> click </button> -->
+        <basis core="print" datamembername="product.show" run="atclient">
+          <face>
+            <h2>@name@</h2>
+          </face>
+        </basis>
+        <div class="radioBtns">
+          <form>
+            <h3>موجودی انبار :
+
+              [##cms.color.value|(not set)##]
+            </h3>
+            <!-- [##cms.color.count|(not set)##] -->
+        </form>
+        </div>
+
+    <script src="basiscore.js"></script>
+        <script>
+          const host = {
+            sources: {
+              "product.show": [{ id: 1, name: "Galaxy S23 Ultra" }],
+              "productprice": [
+                { id: 1, color: "مشکی", price: 500_000, count: 5 },
+                { id: 2, color: "سفید", price: 1_000_000 , count: 2},
+                { id: 3, color: "آبی", price: 25_000_000 , count: 4},
+              ],
+            },
+          };
+          const radioBtns = document.querySelector(".radioBtns form");
+          let i = 1;
+          host.sources.productprice.map((price) => {
+            var input = document.createElement("input");
+            input.type = "radio";
+            input.name = 'cms.color';
+            input.setAttribute('bc-triggers', "change")
+            input.setAttribute('price', price.price)
+            input.value= price.count;
+            var label = document.createElement("label");
+            label.innerHTML = price.color
+            radioBtns.appendChild(input);
+            radioBtns.appendChild(label);
+          });
+          console.log(radioBtns);
+
+        </script>
+      </body>
+</body>
+</html>

@@ -1,0 +1,170 @@
+{
+  "setting": {
+    "keepalive": true
+  },
+  "sources": [
+    {
+      "options": {
+        "tableName": "product.list",
+        "keyFieldName": null,
+        "statusFieldName": null,
+        "mergeType": 0
+      },
+      "data": [
+          {
+              "id": 1,
+              "productName": "ایسر مدل Nitro 5 ",
+              "Price": 50550000,
+              "Ram":8
+            },
+            {
+              "id": 2,
+              "productName": "ایسر مدل Aspire",
+              "Price": 24100000,
+              "Ram":16
+            },
+            {
+              "id": 3,
+              "productName": " ایسوس مدل TUF Dash",
+              "Price":6279000,
+              "Ram":16
+            },
+            {
+              "id": 4,
+              "productName": " ایسوس مدل Vivobook MX330",
+              "Price": 36890000,
+              "Ram":24
+            },
+            {
+              "id": 5,
+              "productName": "ایسوس مدل Vivobook Radeon",
+              "Price": 31400000,
+              "Ram":16
+            },
+            {
+              "id": 6,
+              "productName": "اپل مدل 2023 MacBook Pro MPHF3",
+              "Price": 122819000,
+              "Ram":24
+            },
+            {
+              "id": 7,
+              "productName": "اپل مدل 2023 MacBook Pro MPHJ3",
+              "Price": 129900000,
+              "Ram":16
+            },
+            {
+              "id": 8,
+              "productName": " اپل مدل MacBook MKGP3",
+              "Price": 86760000,
+              "Ram":8
+            }
+      ]
+    },
+    {
+      "options": {
+        "tableName": "product.cat",
+        "keyFieldName": null,
+        "statusFieldName": null,
+        "mergeType": 0
+      },
+      "data": [
+        {
+          "id": 1,
+          "Name": "Asus"
+        },
+        {
+          "id": 2,
+          "Name": "Acer"
+        },
+        {
+          "id": 3,
+          "Name": "APPLE"
+        }
+      ]
+    },
+    {
+      "options": {
+          "tableName":"Asus",
+          "keyFieldName": null,
+          "statusFieldName": null,
+          "mergeType": 0
+        },
+        "data": [
+          {
+            "id": 3,
+            "productName": " ایسوس مدل TUF Dash",
+            "Price":6279000,
+            
+            "Ram":16
+          },
+          {
+            "id": 4,
+            "productName": " ایسوس مدل Vivobook MX330",
+            "Price": 36890000,
+            "Ram":24
+          },
+          {
+            "id": 5,
+            "productName": "ایسوس مدل Vivobook Radeon",
+            "Price": 31400000,
+            "Ram":16
+          }
+
+        ]
+    },
+    {
+      "options": {
+          "tableName":"Acer",
+          "keyFieldName": null,
+          "statusFieldName": null,
+          "mergeType": 0
+        },
+        "data": [
+          {
+            "id": 1,
+            "productName": "ایسر مدل Nitro 5 ",
+            "Price": 50550000,
+            "Ram":8
+          },
+          {
+            "id": 2,
+            "productName": "ایسر مدل Aspire",
+            "Price": 24100000,
+            "Ram":16
+          }
+        ]
+    },
+    {
+      "options": {
+          "tableName":"APPLE",
+          "keyFieldName": null,
+          "statusFieldName": null,
+          "mergeType": 0
+        },
+        "data": [
+          {
+            "id": 6,
+            "productName": "اپل مدل 2023 MacBook Pro MPHF3",
+            "Price": 122819000,
+            "Ram":24
+          },
+          {
+            "id": 7,
+            "productName": "اپل مدل 2023 MacBook Pro MPHJ3",
+            "Price": 129900000,
+            "Ram":8
+          
+          
+          },
+          {
+            "id": 8,
+            "productName": " اپل مدل MacBook MKGP3",
+            "Price": 86760000,
+            "Ram":16
+          
+          }
+        ]
+    }
+  ]
+}

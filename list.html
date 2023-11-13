@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="basiscore.js"></script>
+    <title>Project List</title>
+  </head>
+
+  <body>
+    <basis core="api" url="products.json" method="get" name="api.name" run="atclient" preview="true" triggeers="list.cat"></basis>
+    <basis core="callback" trigers="api" run="atclient"></basis>
+    
+    <select name="brand" id="brand">
+      <basis core="print" datamembername="product.cat" run="atclient">
+        <face>
+          <layout>
+            <option value="@Name@">@Name@</option>
+          </layout>
+        </face>
+      </basis>
+    </select>
+    
+    <basis core="print" datamembername="product.list" run="atclient">
+      <face>
+        <div class="productItem" style="width: fit-content">
+          <h3>@productName@</h3>
+          <div
+            class="proTitle"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span>@Price@</span>
+            <span>@Ram@</span>
+          </div>
+        </div>
+      </face>
+    </basis>
+
+
+    <!-- <script>
+      const host = {
+    "setting": {
+      "keepalive": true
+    },
+    "sources": [
+      {
+        "options": {
+          "tableName": "product.list",
+          "keyFieldName": null,
+          "statusFieldName": null,
+          "mergeType": 0
+        },
+        "data": [
+            {
+                "id": 1,
+                "productName": "samsung galaxy s5 ",
+                "Price": 1400,
+                "Count": 1
+              },
+              {
+                "id": 2,
+                "productName": "Samsung S2 ",
+                "Price": 785000,
+                "Count": 1
+              },
+              {
+                "id": 3,
+                "productName": "Samsung Se2 ",
+                "Price":123000,
+                "Count": 1
+              },
+              {
+                "id": 4,
+                "productName": "Samsung S7 ",
+                "Price": 170000,
+                "Count": 1
+              },
+              {
+                "id": 5,
+                "productName": "Huawei G1",
+                "Price": 58000,
+                "Count": 1
+              },
+              {
+                "id": 6,
+                "productName": "Huawei G4",
+                "Price": 154000,
+                "Count": 1
+              },
+              {
+                "id": 7,
+                "productName": "Huawei L3 ",
+                "Price": 10000,
+                "Count": 1
+              },
+              {
+                "id": 8,
+                "productName": "Iphone 15 ",
+                "Price": 140000,
+                "Count": 1
+              },
+              {
+                "id": 9,
+                "productName": "Iphone 13 ",
+                "Price": 120000,
+                "Count": 1
+              }
+        ]
+      },
+      {
+        "options": {
+          "tableName": "product.cat",
+          "keyFieldName": null,
+          "statusFieldName": null,
+          "mergeType": 0
+        },
+        "data": [
+          {
+            "id": 1,
+            "Name": "SAMSUNG"
+          },
+          {
+            "id": 2,
+            "Name": "HUAWEI"
+          },
+          {
+            "id": 3,
+            "Name": "APPLE"
+          }
+        ]
+      },
+      {
+        "options": {
+            "tableName":"SAMSUNG",
+            "keyFieldName": null,
+            "statusFieldName": null,
+            "mergeType": 0
+          },
+          "data": [
+            {
+                "id": 1,
+                "productName": "samsung galaxy s5 ",
+                "Price": 1400,
+                "Count": 1
+              },
+              {
+                "id": 2,
+                "productName": "Samsung S2 ",
+                "Price": 785000,
+                "Count": 1
+              },
+              {
+                "id": 3,
+                "productName": "Samsung Se2 ",
+                "Price":123000,
+                "Count": 1
+              },
+              {
+                "id": 4,
+                "productName": "Samsung S7 ",
+                "Price": 170000,
+                "Count": 1
+              }
+          ]
+      },
+      {
+        "options": {
+            "tableName":"HUAWEI",
+            "keyFieldName": null,
+            "statusFieldName": null,
+            "mergeType": 0
+          },
+          "data": [
+            {
+                "id": 5,
+                "productName": "Huawei G1",
+                "Price": 58000,
+                "Count": 1
+              },
+              {
+                "id": 6,
+                "productName": "Huawei G4",
+                "Price": 154000,
+                "Count": 1
+              },
+              {
+                "id": 7,
+                "productName": "Huawei L3 ",
+                "Price": 10000,
+                "Count": 1
+              }
+          ]
+      },
+      {
+        "options": {
+            "tableName":"APPLE",
+            "keyFieldName": null,
+            "statusFieldName": null,
+            "mergeType": 0
+          },
+          "data": [
+            {
+                "id": 8,
+                "productName": "Iphone 15 ",
+                "Price": 140000,
+                "Count": 1
+              },
+              {
+                "id": 9,
+                "productName": "Iphone 13 ",
+                "Price": 120000,
+                "Count": 1
+              }
+          ]
+      }
+    ]
+  };
+
+console.log(host);
+    </script> -->
+
+  </body>
+</html>
